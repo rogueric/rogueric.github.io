@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" type="image/png" href="./images/branding/icon.png" />
+    <title>Rogue ID</title>
+</head>
+
+<body>
+    <div id="top"></div>
+    <nav>
+        <logo><a href="#top"><img src="./images/branding/logo.svg"/></a></logo>
+        <span id="hamburger" class="material-icons">
+            menu
+        </span>
+        <side-bar>
+            <h3><a href="#work" class="effect-underline">Work</a></h3>
+            <h3><a href="#about" class="effect-underline">About</a></h3>
+            <h3><a href="#contact" class="effect-underline">Contact</a></h3>
+        </side-bar>
+    </nav>
+    <div id="video_contain">
+        <div id="video-text">
+            <div>
+                <h1>The id,</h1>
+                <h1>ego,</h1>
+                <h1>and super-ego.</h1>
+            </div>
+        </div>
+        <span id="volume" class="material-icons">
+            volume_off
+        </span>
+        <div id="video">
+            <div id="player"></div>
+        </div>
+    </div>
+    <work class="section" id="work">
+        <h1 class="section-header fade-in">Work</h1>
+        <projects>
+            <a href="./work.html" class="project" id="project1">
+                <video onmouseover="this.play()" onmouseout="this.pause();" muted loop>
+                    <source src="./images/transparent-house/case-study1-preview.mp4" type="video/mp4"/>
+                </video>
+            </a>
+            <a href="./work.html#tp5" class="project" id="project5">
+                <img src="./images/transparent-house/hp/hp.002.jpeg" tag="hp"/>
+            </a>
+            <a href="./work.html#tp4" class="project" id="project4">
+                <img src="./images/other/iconAir.jpg" tag="icon air craft"/>
+            </a>
+            <a href="./work.html#tp6" class="project" id="project6">
+                <img src="./images/muse/ROMA_SHIELD.jpg" tag="roma shield"/>
+            </a>
+            <a href="./work.html#tp3" class="project" id="project3">
+                <img src="./images/other/BoostMobile.png" tag="boost mobile"/>
+            </a>
+            <a href="./work.html#tp2" class="project" id="project2">
+                <video onmouseover="this.play()" onmouseout="this.pause();" muted loop>
+                    <source src="./images/transparent-house/case-study2-preview.mp4" type="video/mp4"/>
+                </video>
+            </a>
+            <a href="./work.html#tp7" class="project" id="project7">
+                <img src="./images/muse/orion/orion.002.jpeg" tag="orion"/>
+            </a>
+            <a href="./work.html#tp8" class="project" id="project8">
+                <img src="./images/muse/hayatt/hayatt.004.jpeg" tag="hayatt"/>
+            </a>
+        </projects>
+    </work>
+    <div class="view-work">
+        <a class="effect-underline" href="./work.html">View All Work</a>
+    </div>
+    <about class="section" id="about">
+        <h1 class="section-header">About</h1>
+        <div id="about-content">
+            <div class="paragraph">
+                <p>
+                    In the last few years the world has changed and we believe the agency model has had to change as well. We have dedicated ourselves to be without boundaries, becoming the adjunct creative team that can augment the clients’ internal team that may still be in development. The name Rogue stems from some early comments we received when we left the global team that had bought our agency. One of our colleagues, when we told them how we wanted to consult for a while and then change the client/agency dynamic, said our goal was to build a rogue agency, it stuck.
+                </p>
+            </div>
+            <div class="paragraph">
+                <p>
+                    During the last six years, we have immersed ourselves in our various client teams, adding to the mix the unexpected results we delivered as we ran our agencies.
+                </p>
+            </div>
+            <div class="paragraph">
+                <p>
+                    The best way to think of the us as the senior team of a global agency that has evolved to be a CMO team of experts that can help you launch, reposition, or expand your creative reach. Our collaborators are global and encompass the best in the business.
+                </p>
+            </div>
+            <div id="people">
+                <div class="person">
+                    <div>
+                        <a href="https://www.linkedin.com/in/denis-krylov-2516631/">
+                            <img src="./images/people/denis.jpeg"/>
+                        </a>
+                    </div>
+                    <p>Denis Krylov</p>
+                </div>
+                <div class="person">
+                    <div>
+                        <a href="https://www.linkedin.com/in/raifavacho/">
+                            <img src="./images/people/rai.jpeg"/>
+                        </a>
+                    </div>
+                    <p>Rai Favacho</p>
+                </div>
+                <div class="person">
+                    <div>
+                        <a href="https://www.linkedin.com/in/ricperalta/">
+                            <img src="./images/people/ric.jpeg"/>
+                        </a>
+                    </div>
+                    <p>Ric Peralta</p>
+                </div>
+            </div>
+        </div>
+    </about>
+    <contact class="section" id="contact">
+        <h1 class="section-header">Contact</h1>
+        <div id="contact-content">
+            <h4>You can reach us via email at : <a class="effect-underline" href="mailto:hello@rogueid.com?Subject=I would like to schedule a meeting!" target="_top">ric@rogueid.com</a></h4>
+            <h4>Or you may call us at : <a class="effect-underline" href="tel:+1-415-735-4101">+1 (415) 735-4101</a></h4>
+        </div>
+        <div id="location">
+            <p>494 Jackson Street</p>
+            <p>San Francisco, CA 94111</p>
+        </div>
+    </contact>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+</html>
