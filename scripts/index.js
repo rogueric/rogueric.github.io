@@ -25,7 +25,7 @@ $("side-bar").click(function () {
 
 // video player
 var tag = document.createElement('script');
-const videos = ["U3_uxUSeZV4", "CmCIZ_aUAeQ", "Faow3SKIzq0", "F_7ZoAQ3aJM"];
+const videos = ["U3_uxUSeZV4", "CmCIZ_aUAeQ", "Faow3SKIzq0", "F_7ZoAQ3aJM", "tnGaCZZ5Z28"];
 let chosen = ""
 
 $(document).ready(function(){
