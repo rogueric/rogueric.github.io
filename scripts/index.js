@@ -8,10 +8,18 @@
 $("#hamburger").click(function () {
     if ($("#hamburger").text() == "menu_open") {
         $("#hamburger").text("menu");
-        $("side-bar").stop().animate({ opacity: "0", right: "-20rem", queue: false });
+        $("side-bar").stop().animate({
+            opacity: "0",
+            right: "-20rem",
+            queue: false
+        });
     } else if ($("#hamburger").text("menu")) {
         $("#hamburger").text("menu_open");
-        $("side-bar").stop().animate({ opacity: "1", right: "0rem", queue: false }).css("display", "flex");
+        $("side-bar").stop().animate({
+            opacity: "1",
+            right: "0rem",
+            queue: false
+        }).css("display", "flex");
     }
 });
 
@@ -19,7 +27,11 @@ $("#hamburger").click(function () {
 $("side-bar").click(function () {
     if ($("#hamburger").text() == "menu_open") {
         $("#hamburger").text("menu");
-        $("side-bar").animate({ opacity: "0", right: "-20rem", queue: false });
+        $("side-bar").animate({
+            opacity: "0",
+            right: "-20rem",
+            queue: false
+        });
     }
 });
 
@@ -28,7 +40,7 @@ var tag = document.createElement('script');
 const videos = ["U3_uxUSeZV4", "CmCIZ_aUAeQ", "Faow3SKIzq0", "F_7ZoAQ3aJM", "tnGaCZZ5Z28"];
 let chosen = ""
 
-$(document).ready(function(){
+$(document).ready(function () {
     const random = Math.floor(Math.random() * videos.length);
     chosen = videos[random]
 })
@@ -38,6 +50,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 let player;
+
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         videoId: chosen,
@@ -62,7 +75,13 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
-    $("#player").animate({ opacity: 1 }, { easing: "swing" }, { duration: 500 });
+    $("#player").animate({
+        opacity: 1
+    }, {
+        easing: "swing"
+    }, {
+        duration: 500
+    });
     if (event.data == YT.PlayerState.ENDED) {
         player.playVideo();
     }
@@ -89,7 +108,10 @@ $('a[href*="#"]')
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 event.preventDefault();
-                $('html, body').animate({ left: target.offset().left, scrollTop: target.offset().top }, 1000, function () {
+                $('html, body').animate({
+                    left: target.offset().left,
+                    scrollTop: target.offset().top
+                }, 1000, function () {
                     var $target = $(target);
                     $target.focus();
                     if ($target.is(":focus")) {
@@ -126,14 +148,14 @@ $('a[href*="#"]')
 
 //fulscreen work images and video
 //show bigger image
-$(".case-study img").click(function(){
-    $("modal").fadeIn().css("display","flex")
+$(".case-study img").click(function () {
+    $("modal").fadeIn().css("display", "flex")
     $("modal img").attr("src", $(this).attr("src"))
 })
 
-$(".case-study video").click(function(){
+$(".case-study video").click(function () {
     let videoUrl = $(this).find("source").attr("src")
-    $("modal").fadeIn().css("display","flex")
+    $("modal").fadeIn().css("display", "flex")
     $("video").attr("poster", this.poster)
     $("modal source").attr("src", videoUrl)
     $("modal video").css("display", "block")
@@ -141,18 +163,18 @@ $(".case-study video").click(function(){
 })
 
 // close function
-function closeModal(){
+function closeModal() {
     $("modal source").attr("src", "")
     $("modal img").attr("src", "")
     $("video")[0].load()
     $("modal").fadeOut()
-    $("modal video").css("display","none")
+    $("modal video").css("display", "none")
 }
 $(".close").click(function () {
     closeModal();
 })
-$(document).keydown(function(event) { 
-    if (event.keyCode == 27) { 
-      closeModal();
+$(document).keydown(function (event) {
+    if (event.keyCode == 27) {
+        closeModal();
     }
-  });
+});
