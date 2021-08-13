@@ -362,6 +362,27 @@
             width: 100%;
         }
 
+        & .material-icons {
+            font-size: 3rem;
+            transition: .5s;
+            text-shadow: .08rem .06rem rgba(0, 0, 0, 0.75);
+            z-index: 200;
+            position: absolute;
+            padding: 1.5rem;
+            color: #fbfbfb;
+            text-align: center;
+            cursor: pointer;
+            opacity: .75;
+        }
+
+        & #left {
+            left: 0;
+        }
+
+        & #right {
+            right: 0;
+        }
+
         & .close {
             transition: .5s;
             text-shadow: .08rem .06rem rgba(0, 0, 0, 0.75);
@@ -376,7 +397,9 @@
         }
 
         & .close:hover,
-        .close:active {
+        .close:active,
+        .material-icons:active,
+        .material-icons:hover {
             transform: scale(1.5);
             opacity: 1;
         }

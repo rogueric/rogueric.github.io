@@ -553,6 +553,28 @@ modal img {
   width: 100%;
 }
 
+modal .material-icons {
+  font-size: 3rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-shadow: 0.08rem 0.06rem rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  position: absolute;
+  padding: 1.5rem;
+  color: #fbfbfb;
+  text-align: center;
+  cursor: pointer;
+  opacity: .75;
+}
+
+modal #left {
+  left: 0;
+}
+
+modal #right {
+  right: 0;
+}
+
 modal .close {
   -webkit-transition: .5s;
   transition: .5s;
@@ -568,7 +590,9 @@ modal .close {
 }
 
 modal .close:hover,
-modal .close:active {
+modal .close:active,
+modal .material-icons:active,
+modal .material-icons:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   opacity: 1;

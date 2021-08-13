@@ -85,6 +85,9 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
         player.playVideo();
     }
+    if ($(window).width() <= 650) {
+        $("#video_contain").css("background-color", "black")
+    };
 }
 
 //volume toggle
@@ -151,16 +154,20 @@ $('a[href*="#"]')
 $(".case-study img").click(function () {
     $("modal").fadeIn().css("display", "flex")
     $("modal img").attr("src", $(this).attr("src"))
-})
+    $("#left").fadeIn();
+    $("#right").fadeIn();
+});
 
 $(".case-study video").click(function () {
+    $("#left").css("display", "none");
+    $("#right").css("display", "none");
     let videoUrl = $(this).find("source").attr("src")
     $("modal").fadeIn().css("display", "flex")
     $("video").attr("poster", this.poster)
     $("modal source").attr("src", videoUrl)
     $("modal video").css("display", "block")
     $("video")[0].load()
-})
+});
 
 // close function
 function closeModal() {
@@ -169,12 +176,48 @@ function closeModal() {
     $("video")[0].load()
     $("modal").fadeOut()
     $("modal video").css("display", "none")
-}
+};
 $(".close").click(function () {
     closeModal();
-})
+});
 $(document).keydown(function (event) {
     if (event.keyCode == 27) {
         closeModal();
+    }
+});
+//set carousel variables
+let position
+let current_image
+let all_images
+// click image
+$(".work-picture").click(function () {
+    current_image = $('img', $(this)).attr('src').split("/").pop();
+    all_images = $('img').map(function () {
+        return this.src;
+    }).get();
+    all_images.forEach(function (item, index) {
+        if (current_image === item.split("/").pop()) {
+            if (index > 1) {
+                position = index;
+            }
+        }
+    })
+});
+// image carousel left right
+$("#left").click(function () {
+    if (position <= 2) {
+        $("modal img").attr("src", all_images[position = all_images.length - 1])
+
+    } else {
+        $("modal img").attr("src", all_images[position -= 1])
+    }
+
+});
+$("#right").click(function () {
+    if (position >= all_images.length - 1) {
+        $("modal img").attr("src", all_images[position = 2])
+
+    } else {
+        $("modal img").attr("src", all_images[position += 1])
     }
 });
