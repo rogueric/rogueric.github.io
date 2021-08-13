@@ -180,10 +180,15 @@ function closeModal() {
 $(".close").click(function () {
     closeModal();
 });
+//key press function call
 $(document).keydown(function (event) {
     if (event.keyCode == 27) {
         closeModal();
-    }
+    } else if (event.keyCode == 37) {
+        left();
+    } else if (event.keyCode == 39) {
+        right();
+    };
 });
 //set carousel variables
 let position
@@ -205,19 +210,27 @@ $(".work-picture").click(function () {
 });
 // image carousel left right
 $("#left").click(function () {
+    left()
+});
+$("#right").click(function () {
+    right()
+});
+
+// go left 
+function left() {
     if (position <= 2) {
         $("modal img").attr("src", all_images[position = all_images.length - 1])
 
     } else {
         $("modal img").attr("src", all_images[position -= 1])
     }
-
-});
-$("#right").click(function () {
+}
+//go right
+function right() {
     if (position >= all_images.length - 1) {
         $("modal img").attr("src", all_images[position = 2])
 
     } else {
         $("modal img").attr("src", all_images[position += 1])
     }
-});
+}
