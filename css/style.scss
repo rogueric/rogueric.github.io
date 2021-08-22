@@ -1,6 +1,10 @@
     @import "./text";
 
+    nav.hidden {
+        transform:(translateY(-100%));
+    }
     nav {
+        transition: .5s;
         top: 0;
         position: fixed;
         display: flex;

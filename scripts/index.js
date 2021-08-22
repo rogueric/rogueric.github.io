@@ -3,7 +3,14 @@
 //     var newURL = location.href.split("#")[0];
 //     window.history.pushState('object', document.title, newURL);
 // })
-
+//hide nav on scroll
+var prev = 0;
+$(window).on('scroll', function(){
+  var scrollTop = $(window).scrollTop();
+  $("nav").toggleClass('hidden', scrollTop > prev);
+  prev = scrollTop;
+  close_side();
+});
 // hamburger menu open close
 $("#hamburger").click(function () {
     if ($("#hamburger").text() == "menu_open") {
@@ -25,6 +32,10 @@ $("#hamburger").click(function () {
 
 // click side-bar link closes it
 $("side-bar").click(function () {
+    close_side();
+});
+
+function close_side (){
     if ($("#hamburger").text() == "menu_open") {
         $("#hamburger").text("menu");
         $("side-bar").animate({
@@ -33,7 +44,7 @@ $("side-bar").click(function () {
             queue: false
         });
     }
-});
+}
 
 // video player
 var tag = document.createElement('script');

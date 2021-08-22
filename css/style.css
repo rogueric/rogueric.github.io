@@ -67,7 +67,14 @@ a.effect-underline:hover:after {
           transform: scale(1);
 }
 
+nav.hidden {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 nav {
+  -webkit-transition: .5s;
+  transition: .5s;
   top: 0;
   position: fixed;
   display: -webkit-box;
