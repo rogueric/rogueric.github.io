@@ -100,17 +100,22 @@
     }
 
     .section {
-        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
         & .section-header {
+            height: 10rem;
             line-height: 5rem;
-            border-top: 1px solid black;
+            // border-top: 1px solid black;
             text-align: center;
             width: 75vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
     }
@@ -124,7 +129,6 @@
 
         & projects {
             left: 0;
-            margin-top: 5rem;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -145,13 +149,13 @@
                 & video {
                     max-width: unset;
                     transition: .5s;
-                    opacity: .75;
+                    opacity: .95;
                 }
 
                 & img {
                     height: fit-content;
                     transition: .5s;
-                    opacity: .75;
+                    opacity: 1;
                 }
 
                 & img:hover,
@@ -159,7 +163,7 @@
                 img:active,
                 video:active {
                     transform: scale(1.1);
-                    opacity: 1;
+                    opacity: .75;
                 }
             }
         }
@@ -238,11 +242,10 @@
     .paragraph {
         padding-top: .5rem;
         padding-bottom: .5rem;
-        max-width: 75vw;
+        max-width: 70vw;
 
         & p {
-            text-indent: 1rem;
-            line-height: 1.5rem;
+            line-height: 2rem;
             color: black;
         }
     }
@@ -269,7 +272,7 @@
     }
 
     case-studies {
-        margin-top: 3rem;
+        // margin-top: 3rem;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -279,9 +282,11 @@
             width: 70vw;
             margin-top: 3rem;
             margin-left: 15vw;
+            margin-bottom: 6rem;
 
             & h4 {
-                margin-top: .5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
 
             & video {
@@ -289,7 +294,7 @@
             }
 
             & h1 {
-                margin-bottom: 1rem;
+                margin-bottom: 3rem;
             }
 
             & .work-picture {
