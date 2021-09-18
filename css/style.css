@@ -170,6 +170,8 @@ nav side-bar h3 {
 }
 
 #video_contain #volume {
+  color: #fbfbfb;
+  text-shadow: 0.08rem 0.06rem rgba(0, 0, 0, 0.75);
   margin: 1rem;
   cursor: pointer;
   position: absolute;
@@ -179,18 +181,25 @@ nav side-bar h3 {
 
 #video_contain #video {
   z-index: -100;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  width: 400%;
-  height: 400%;
-  left: -150%;
-  top: -150%;
 }
 
 #video_contain #video #player {
   opacity: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 150%;
+  min-height: 150%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .section {
@@ -272,6 +281,7 @@ work projects .project {
 }
 
 work projects .project video {
+  height: inherit;
   max-width: unset;
   -webkit-transition: .5s;
   transition: .5s;
@@ -279,9 +289,7 @@ work projects .project video {
 }
 
 work projects .project img {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: inherit;
   -webkit-transition: .5s;
   transition: .5s;
   opacity: 1;
