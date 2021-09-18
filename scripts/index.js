@@ -96,9 +96,6 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
         player.playVideo();
     }
-    if ($(window).width() <= 650) {
-        $("#video_contain").css("background-color", "black")
-    };
 }
 
 //volume toggle
