@@ -267,7 +267,7 @@ work projects .project {
   overflow: hidden;
   margin: .5rem;
   width: 40vw;
-  height: 50vh;
+  height: 40vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
