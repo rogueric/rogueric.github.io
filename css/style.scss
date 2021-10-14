@@ -51,6 +51,9 @@
                 margin-bottom: 3rem;
                 margin-right: 3rem;
                 margin-left: 1rem;
+                & a {
+                    padding: 1rem;
+                }
             }
 
         }
@@ -80,6 +83,7 @@
         }
 
         & #volume {
+            font-size: 2rem;
             color: #fbfbfb;
             text-shadow: .08rem .06rem rgba(0, 0, 0, 0.75);
             margin: 1rem;
@@ -100,8 +104,8 @@
 
             & #player {
                 opacity: 0;
-                min-width: 150%;
-                min-height: 150%;
+                min-width: 125%;
+                min-height: 125%;
                 width: auto;
                 height: auto;
                 position: absolute;
@@ -282,6 +286,7 @@
 
         #location {
             width: 100%;
+            margin-bottom: 1rem;
         }
     }
 

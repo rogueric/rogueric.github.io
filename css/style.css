@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Arimo&display=swap");
 body {
   font-family: 'Arimo', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -141,6 +141,10 @@ nav side-bar h3 {
   margin-left: 1rem;
 }
 
+nav side-bar h3 a {
+  padding: 1rem;
+}
+
 #video_contain {
   height: 100vh;
   background-attachment: fixed;
@@ -170,6 +174,7 @@ nav side-bar h3 {
 }
 
 #video_contain #volume {
+  font-size: 2rem;
   color: #fbfbfb;
   text-shadow: 0.08rem 0.06rem rgba(0, 0, 0, 0.75);
   margin: 1rem;
@@ -191,8 +196,8 @@ nav side-bar h3 {
 
 #video_contain #video #player {
   opacity: 0;
-  min-width: 150%;
-  min-height: 150%;
+  min-width: 125%;
+  min-height: 125%;
   width: auto;
   height: auto;
   position: absolute;
@@ -445,6 +450,7 @@ contact #contact-content h4 {
 
 contact #location {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 case-studies {
