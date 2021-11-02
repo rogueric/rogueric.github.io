@@ -43,7 +43,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            display: flex;
+            display: none;
             opacity: 0;
 
             & h3 {
@@ -52,7 +52,8 @@
                 margin-right: 3rem;
                 margin-left: 1rem;
                 & a {
-                    padding: 1rem;
+                    font-size: 3rem;
+                    margin: 1rem;
                 }
             }
 

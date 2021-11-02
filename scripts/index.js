@@ -17,6 +17,7 @@ $("#hamburger").click(function () {
         $("#hamburger").text("menu");
         $("side-bar").stop().animate({
             opacity: "0",
+            display: "none",
             right: "-20rem",
             queue: false
         });
@@ -24,6 +25,7 @@ $("#hamburger").click(function () {
         $("#hamburger").text("menu_open");
         $("side-bar").stop().animate({
             opacity: "1",
+            display: "flex",
             right: "0rem",
             queue: false
         }).css("display", "flex");

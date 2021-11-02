@@ -128,9 +128,7 @@ nav side-bar {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   opacity: 0;
 }
 
@@ -142,7 +140,8 @@ nav side-bar h3 {
 }
 
 nav side-bar h3 a {
-  padding: 1rem;
+  font-size: 3rem;
+  margin: 1rem;
 }
 
 #video_contain {
